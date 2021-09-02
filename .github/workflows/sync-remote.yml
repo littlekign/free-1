@@ -13,10 +13,9 @@ jobs:
     steps:
     - name: Pull upstream changes
       id: sync
-      uses: tgymnich/fork-sync@v1.3
+      uses: tgymnich/fork-sync@v1.4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        owner: freev2/free
         base: master
         head: master
        
