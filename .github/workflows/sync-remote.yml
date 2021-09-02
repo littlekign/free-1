@@ -15,7 +15,7 @@ jobs:
       id: sync
       uses: tgymnich/fork-sync@v1.4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.ACCESS_TOKEN }}
         owner:freev2
         base: master
         head: master
