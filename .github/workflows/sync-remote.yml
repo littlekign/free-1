@@ -17,8 +17,8 @@ jobs:
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
         owner: freev2
-        base: master
-        head: master
+        base: main
+        head: main
        
 
     - name: Timestamp
