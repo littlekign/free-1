@@ -1,0 +1,25 @@
+
+name: CI
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"  
+    # scheduled at 1 MIN every day 
+  workflow_dispatch:
+jobs:
+  sync_with_upstream:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Pull upstream changes
+      id: sync
+      uses: tgymnich/fork-sync@v1.3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        owner: freev2
+        base: master
+        head: master
+       
+
+    - name: Timestamp
+      run: date
