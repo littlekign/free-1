@@ -20,7 +20,7 @@ jobs:
         github_token: ${{ secrets.ACCESS_TOKEN }}
         owner: freefq
         base: main
-        head: main
+        # head: main
        
 
     - name: Timestamp
