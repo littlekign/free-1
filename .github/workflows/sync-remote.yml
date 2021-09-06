@@ -1,4 +1,6 @@
 
+
+
 name: CI
 
 on:
@@ -13,13 +15,12 @@ jobs:
     steps:
     - name: Pull upstream changes
       id: sync
-      uses: tgymnich/fork-sync@v1.4
+      uses: tgymnich/fork-sync@v1.3
       with:
-        # token: ${{ secrets.ACCESS_TOKEN }}
-        owner: freev2
+        github_token: ${{ secrets.ACCESS_TOKEN }}
+        owner: freefq
         base: main
         head: main
-
        
 
     - name: Timestamp
